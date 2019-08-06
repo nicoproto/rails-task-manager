@@ -1,0 +1,12 @@
+<h1><%= @task.title %></h1>
+  <p><%= @task.details %></p>
+  <input type="checkbox" name="completed" <%= @task.completed ? 'checked' : "" %>>
+  <%= @task.completed ? 'This task is completed' : "This task is not completed yet" %>
+  <br>
+  <div class="mt-3">
+    <%= link_to ' Edit task', edit_path(params[:id].to_i) %>
+  </div>
+  <div class="mt-3">
+    <%= link_to ' Back to list', tasks_path, :class=> "fas fa-undo-alt" %>
+  </div>
+

@@ -1,0 +1,17 @@
+<h1>Edit task</h1>
+<%= form_for (@task) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :details%>
+    <%= f.text_field :details, :class=>"form-control" %>
+  </div>
+  <div class="form-inline">
+    <%= f.label :completed, :class=>"pr-3" %>
+    <%= f.check_box :completed, :class=>"form-control" %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
